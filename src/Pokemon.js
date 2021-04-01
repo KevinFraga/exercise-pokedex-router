@@ -13,7 +13,7 @@ class Pokemon extends React.Component {
           <p>
             Average weight: {`${averageWeight.value} ${averageWeight.measurementUnit}`}
           </p>
-          <Link to={`/pokemons/${id}`} > More Details </Link>
+          <Link to={ {pathname: `/pokemons/${id}`, state: {pokemon: this.props.pokemon}} } > More Details </Link>
         </div>
         <img src={image} alt={`${name} sprite`} />
       </div>
